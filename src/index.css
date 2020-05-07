@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'monseratt', sans-serif;
+}
+
+.home {
+  background-color: #808080;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./assets/clouds-background.jpg);
+}
+
+
+main {
+  min-height: 100vh;
+  padding: 25px;
+  width: 100%;
+}
+
+.search-box {
+  width: 25%;
+  margin: 0;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 100%;
+  padding: 15px;  
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 16px 16px 16px 16px;
+
+  box-shadow: 0px 5px rgba(0,0,0,0.2);
+  color: #313131;
+  font-size: 20px;
+  transition: 0.4s ease;
+}
+
+.search-box .search-bar:focus {
+  background-color: rgba(255,255,255,0.75);
+}
+
+.location-box .location{
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.location-box .date {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;  
+  padding-top: 5px;
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 16px;
+  padding: 15px 25px;
+  
+  color: #FFF;
+  font-size: 102px;
+  font-weight: 900;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.weather-box .weather {
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;  
+}
+
+.weather-box .wind-force {
+  color: black;
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 20px; 
+}
+  
+.weather-box .humidity {
+  color: black;
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 20px  
+}
+
+.weather-box .sunrise {
+  color: black;
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.weather-box .sunset {
+  color: black;
+  font-size: 28px;
+  font-weight: 700;  
+}
+
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  display: block;
+  padding:0.35em 100px;
+  border:0.1em solid #FFFFFF;
+  margin: 0 auto;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:600;
+  color: #FFFFFF;
+  text-align:center;
+  transition: all 0.2s;
+  }
+  .button:hover{
+  color: black;
+  background-color: #FFFFFF;
+  }
+  @media all and (max-width:30em){
+   .button{
+  display:block;
+  margin:0.4em auto;
+  }
+}
+
+.icon-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.weatherWrapper {
+  display: flex;
+  color: #fff;
+  font-size: 16px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px 10px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 16px;
+  padding: 15px 25px;
+  color: #FFF;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2); 
+}
+.card img {
+  width: 35px;
+}
+
+nav {
+  background-color: #8db4d6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: auto;
+}
+
+nav li {
+  display: inline;
+  margin: 20px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+li:hover {
+background-color: darkgray;
+cursor: pointer;
+text-decoration: underline;
+}
+
+input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  color: white; 
+  display: inline-block;
+  font-weight: 600;
+  padding: 5px 20px;
+
+}
+
+input[type=radio]:checked + label{
+  color:  #808080;
+  background: white;
+}
+
+label + input[type=radio] + label {
+  border-left: solid;
+  border-width: 3px;
+  border-color: white;
+  border-radius: 0 16px 16px 0;
+}
+
+.radioButtons {
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+  display: inline-block;
+  margin: 30px auto 75px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 5px rgba(0,0,0,0.2);
+}
+
+  /* Tablet */
+
+@media screen and (max-width: 768px) {
+  .home { 
+    background-position: center;
+  }
+  .search-box {
+    width: 50%;
+    margin: 0;
+  }
+}
+    /* Mobile */
+
+@media screen and (max-width: 600px) {
+  .home { 
+    background-position: center;
+  }
+  .search-box {
+    width: 100%;
+    margin: 0;
+  }
+
+  .icon-row {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+  /* Tablet large */
+
+@media screen and (min-width: 1024px) and (min-height: 1320px) {
+  .home { 
+    background-position: center;
+  }
+  .search-box {
+    width: 25%;
+    margin: 0;
+  }
+}
+  
+  
